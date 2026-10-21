@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Una carta del Módulo 7A 💌</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--paper:#fffaf0;--bg:#f3e3c3;--ink:#3b2a1a;--mut:#8a7358;--kraft:#d9b98a;--kraft2:#c49f6b;--kraft3:#e6cba2;--red:#d6455d;--line:#ead9b8;
+--bg0:#dbe9ff;--bd0:#6aa8ff;--bg1:#ffd6d6;--bd1:#ef5350;--bg2:#ffe3cc;--bd2:#fb8c3c;--bg3:#fff3bf;--bd3:#f2c94c;--bg4:#e0f5c8;--bd4:#8bc34a;--bg5:#c9f0d8;--bd5:#2fbf71}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:"Nunito",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background-image:radial-gradient(#e9d3a8 1.2px,transparent 1.2px);background-size:22px 22px}
+main{max-width:460px;margin:0 auto;padding:max(18px,env(safe-area-inset-top)) 16px max(24px,env(safe-area-inset-bottom));min-height:100vh;display:flex;flex-direction:column;justify-content:center}
+.hand{font-family:"Caveat","Segoe Script","Bradley Hand",cursive;font-weight:700}
+h1{font-size:40px;line-height:1;margin:0 0 6px;text-align:center}
+h2{font-size:28px;line-height:1.15;margin:0 0 6px;text-align:center}
+.sub{text-align:center;color:var(--mut);font-size:15px;margin:0 0 14px}
+.scene{display:flex;flex-direction:column;align-items:center;gap:18px;padding-top:6px}
+.env{position:relative;width:290px;height:190px;margin-top:70px;cursor:pointer}
+.env .back{position:absolute;inset:0;background:var(--kraft2);border-radius:8px;box-shadow:0 14px 26px rgba(80,50,10,.28)}
+.env .letter{position:absolute;left:14px;right:14px;top:12px;height:170px;background:var(--paper);border-radius:6px;z-index:2;transition:transform .7s .35s;padding:14px;font-size:26px;text-align:center;line-height:1.3;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+.env .letter i{display:block;height:7px;border-radius:9px;background:var(--line);margin:9px 0}
+.env.open .letter{transform:translateY(-95px)}
+.env .front{position:absolute;inset:0;z-index:3;background:var(--kraft);border-radius:8px;clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%)}
+.env .flap{position:absolute;left:0;top:0;width:100%;height:112px;z-index:4;background:var(--kraft3);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .6s,z-index 0s .3s;border-radius:8px 8px 0 0}
+.env.open .flap{transform:rotateX(180deg);z-index:1}
+.env .seal{position:absolute;left:50%;top:92px;width:54px;height:54px;margin-left:-27px;border-radius:50%;background:var(--red);z-index:5;display:grid;place-items:center;font-size:26px;box-shadow:0 4px 8px rgba(0,0,0,.3);transition:opacity .3s,transform .3s}
+.env.open .seal{opacity:0;transform:scale(.4)}
+.stamp{position:absolute;right:12px;top:12px;z-index:6;width:46px;height:56px;background:#fff7e0;border:2px dashed var(--red);display:grid;place-items:center;font-size:24px;transform:rotate(6deg)}
+.postmark{position:absolute;left:12px;bottom:14px;z-index:6;font-size:11px;font-weight:800;color:#7a5a38;opacity:.7;border:2px solid #7a5a38;border-radius:50%;width:58px;height:58px;display:grid;place-items:center;text-align:center;line-height:1.05;transform:rotate(-12deg)}
+.tap{animation:bob 1.4s ease-in-out infinite;font-size:26px}
+@keyframes bob{50%{transform:translateY(-7px)}}
+.fly{animation:fly 1s .2s ease-in forwards}
+@keyframes fly{to{transform:translate(120px,-260px) rotate(14deg) scale(.4);opacity:0}}
+.paper{background:var(--paper);border-radius:6px;padding:18px 16px 22px;box-shadow:0 12px 26px rgba(80,50,10,.22);border-top:8px solid var(--red);animation:up .4s}
+@keyframes up{from{transform:translateY(24px);opacity:0}}
+.track{position:relative;display:flex;justify-content:space-between;margin:2px 2px 16px}
+.track:before{content:"";position:absolute;left:16px;right:16px;top:50%;height:4px;background:var(--line);transform:translateY(-50%)}
+.nd{position:relative;z-index:1;width:30px;height:30px;border-radius:50%;background:var(--paper);border:3px solid var(--line);display:grid;place-items:center;font-size:14px;transition:all .3s}
+.nd.done{border-color:var(--c);background:var(--cb)}
+.nd.cur{border-color:var(--red);transform:scale(1.22);box-shadow:0 0 0 4px rgba(214,69,93,.2)}
+.tag{text-align:center;font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--mut);margin:-6px 0 4px}
+.leg{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:800;color:var(--mut);margin:6px 0 2px}
+.leg i{flex:1;height:8px;border-radius:9px;background:linear-gradient(90deg,#ef5350,#fb8c3c,#f2c94c,#8bc34a,#2fbf71)}
+.opts{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+.opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;padding:14px;border-radius:18px;border:3px solid;font:inherit;font-size:16px;font-weight:800;color:var(--ink);cursor:pointer;transition:transform .12s}
+.opt:active{transform:scale(.96)}
+.opt.sel{transform:scale(1.04) rotate(-1deg);box-shadow:0 0 0 3px var(--ink)}
+.opt .e{font-size:34px;line-height:1}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.row .opt{flex-direction:column;text-align:center;gap:6px;padding:14px 8px}
+.pop{position:fixed;font-size:26px;pointer-events:none;z-index:99;animation:pop .9s ease-out forwards}
+@keyframes pop{to{transform:translate(var(--dx),-130px) scale(1.5);opacity:0}}
+.btn{display:block;width:100%;margin-top:16px;padding:16px;border:0;border-radius:16px;background:var(--red);color:#fff;font:inherit;font-size:19px;font-weight:800;cursor:pointer;box-shadow:0 5px 0 #a32f43}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 #a32f43}
+.btn.alt{background:transparent;color:var(--red);border:3px solid var(--red);box-shadow:none}
+.big{font-size:70px;text-align:center;margin:8px 0}
+.emo{display:flex;justify-content:center;gap:14px;font-size:42px;margin:10px 0 6px}
+.st{text-align:center;font-weight:800;margin-top:8px}
+/* resultado gráfico */
+.chip{display:inline-block;padding:8px 14px;border:3px solid;border-radius:99px;font-weight:800;font-size:15px;margin:2px 0 8px}
+.prof{font-size:30px;line-height:1.05;margin:0}
+.gauge,.chart{width:100%;height:auto;display:block}
+.needle{transform-origin:120px 118px;transform:rotate(-90deg);animation:nd 1.3s .5s cubic-bezier(.3,1.5,.5,1) forwards}
+@keyframes nd{to{transform:rotate(var(--a))}}
+.draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.6s .2s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.mk{transform-box:fill-box;transform-origin:center;opacity:0;animation:mk .5s forwards}
+@keyframes mk{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 4px}
+.duo div{border:3px solid;border-radius:16px;padding:10px 6px;font-weight:800;font-size:13px;line-height:1.25}
+.duo b{display:block;font-size:26px}
+.h3{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin:14px 0 2px}
+.bugE{font-size:72px;line-height:1.1}
+.arch{font-size:13px;font-weight:800;color:var(--mut);letter-spacing:.04em;text-transform:uppercase}
+.desc{margin:8px 0 10px;font-size:15px;line-height:1.35}
+.tn{display:grid;gap:8px;text-align:left}
+.tn div{background:var(--bg3);border:3px solid var(--bd3);border-radius:14px;padding:10px 12px;font-size:14px;line-height:1.3}
+.tn b{display:block;margin-bottom:2px}
+</style>
+</head>
+<body>
+<main id="app"></main>
+<script>
+/* ====== CONFIGURACIÓN ====== */
+var MAIL = "cartografiamapeando@gmail.com";
+var ENDPOINT = "https://formsubmit.co/ajax/" + MAIL;      /* envío sin imagen (JSON) */
+var ENDPOINT_FORM = "https://formsubmit.co/" + MAIL;      /* envío clásico con imagen adjunta (multipart) */
+var CC = "cartografiadispositivo@gmail.com";   /* recibe copia de cada respuesta */
+/* Cada opción: [emoji, texto, valencia]. Valencia 1 = muy incómodo ... 5 = muy cómodo; 0 = contexto (sin color emocional). */
+var Q = [
+ {ic:"✨",n:"Vibra",q:"¿Qué vibra te da el Módulo 7A?",sub:"Queremos entender cómo te sientes al buscar y usar los cubículos.",o:[["🧘","Calma y enfoque",5],["🎉","Buena energía y compañía",4],["🎲","Incierta, depende del día",3],["😓","Estrés y prisa",2],["🌪️","Caos total",1]]},
+ {ic:"🎓",n:"Facultad",q:"¿De qué facultad eres?",sub:"Elige la tuya.",o:[["🔬","Ciencias Naturales e Ingeniería",0],["📊","Ciencias Económicas y Administrativas",0],["🌍","Ciencias Sociales",0],["🎨","Artes y Diseño",0]]},
+ {ic:"📆",n:"Frecuencia",q:"¿Qué tan seguido vienes al Módulo 7A?",grid:1,o:[["🌅","Casi todos los días",0],["📅","Varias veces por semana",0],["🗓️","De vez en cuando",0],["🐣","Es de las primeras veces",0]]},
+ {ic:"👥",n:"Compañía",q:"¿Con quién sueles venir?",grid:1,o:[["🧍","Solo, a mi aire",0],["👯","Con una persona",0],["👥","En grupo",0],["🎭","Depende del día",0]]},
+ {ic:"🚪",n:"Llegada",q:"¿Qué sientes justo cuando te acercas a los cubículos?",o:[["🎯","Voy con fe de encontrar uno",4],["🎲","Siento que juego a la lotería",2],["🙄","Ya voy mentalizado a que estará lleno",2],["😬","Voy con nervios, no sé qué me espera",1],["😌","Voy tranquilo, casi siempre hay lugar",5]]},
+ {ic:"👁️",n:"¿Libre?",q:"¿Qué tan fácil o cómodo te resulta saber si un cubículo está ocupado?",o:[["👁️","Tengo que asomarme e interrumpir",2],["❓","A veces dudo si hay gente o solo dejaron cosas",1],["🚶","Paso de largo si veo movimiento",3],["😎","Lo noto fácil a simple vista",5]]},
+ {ic:"⏳",n:"Espera",q:"Si están todos ocupados y no sabes cuánto tardarán, ¿qué sientes al instante?",o:[["⏳","Frustración por no saber cuánto esperar",1],["🔄","Me toca dar vueltas a buscar otro sitio",2],["😐","Resignación total",3],["🏃","Me voy de una vez",2],["🧘","Espero tranquilo, no me afecta",5]]},
+ {ic:"🎧",n:"Dentro",q:"Cuando consigues uno, ¿para qué lo usas y cómo te sientes adentro?",o:[["🎧","Modo concentración total",5],["🗣️","Reunión rápida o trabajo en equipo",4],["☕","Pausa o descanso personal",5],["📚","Estudio en grupo con buena vibra",5],["😅","Lo uso con prisa y algo de estrés",2]]},
+ {ic:"⏱️",n:"Tiempo",q:"Sabiendo que otros pueden estar buscando espacio, ¿cómo te sientes con tu tiempo ahí?",o:[["😇","Sin prisa, me quedo lo que necesito",5],["👀","Miro el reloj y me da culpa",2],["😰","Siento presión por liberarlo rápido",1],["🤷","No lo pienso, uso el tiempo que haga falta",4]]}
+];
+var JOURNEY = [4,5,6,7,8];      /* etapas del viaje (índices de Q) */
+var VAL = [0,4,5,6,7,8];        /* preguntas con puntaje */
+var A = [], S = [], I = [], mailSent = false, pngBlob = null, app = document.getElementById("app");
+var COL = {bg0:"#dbe9ff",bd0:"#6aa8ff",bg1:"#ffd6d6",bd1:"#ef5350",bg2:"#ffe3cc",bd2:"#fb8c3c",bg3:"#fff3bf",bd3:"#f2c94c",bg4:"#e0f5c8",bd4:"#8bc34a",bg5:"#c9f0d8",bd5:"#2fbf71"};
+
+function html(h){ app.innerHTML = h; }
+function envelope(open, inner){
+  return '<div class="env'+(open?' open':'')+'" id="env"><div class="back"></div><div class="letter">'+(inner||'<i></i><i></i><i></i><i></i>')+'</div><div class="front"></div><div class="flap"></div><div class="seal">💌</div><div class="stamp">🎧</div><div class="postmark">MÓDULO<br>7A</div></div>';
+}
+function track(cur){
+  var h = '<div class="track">';
+  Q.forEach(function(d,i){
+    var cls = i < cur ? "nd done" : (i === cur ? "nd cur" : "nd"), v = S[i] || 0;
+    h += '<div class="'+cls+'" style="--c:var(--bd'+v+');--cb:var(--bg'+v+')">'+d.ic+'</div>';
+  });
+  return h + '</div>';
+}
+function burst(emoji, el){
+  var r = el.getBoundingClientRect();
+  for(var n=0;n<7;n++){
+    var s = document.createElement("span");
+    s.className = "pop"; s.textContent = emoji;
+    s.style.left = (r.left + 30 + Math.random()*Math.max(40, r.width-90)) + "px";
+    s.style.top = (r.top + r.height/2) + "px";
+    s.style.setProperty("--dx", (Math.random()*80-40) + "px");
+    s.style.animationDelay = (n*40) + "ms";
+    document.body.appendChild(s);
+    setTimeout((function(x){ return function(){ x.remove(); }; })(s), 1300);
+  }
+}
+
+function intro(){
+  html('<div class="scene"><h1 class="hand">Tienes una carta 💌</h1><p class="sub">Del Módulo 7A, para ti</p>'+envelope(false)+'<div class="tap">👆</div><p class="sub">Toca el sobre para abrirlo</p></div>');
+  var env = document.getElementById("env");
+  env.onclick = function(){ env.onclick = null; env.classList.add("open"); setTimeout(letter, 1300); };
+}
+function letter(){
+  html('<div class="paper"><h1 class="hand">¡Hola! 👋</h1><div class="emo">🎧 🎲 ⏳ ☕</div><p class="sub">Elige emojis y mira cómo se pinta tu recorrido por el Módulo 7A. Sin escribir, en cerca de 1 minuto.</p><div class="leg" style="justify-content:center"><span>😣</span><i style="max-width:150px"></i><span>🤩</span></div><p class="sub" style="font-size:13px">Los colores muestran cómo te sientes: rojo incómodo, verde cómodo.</p><button class="btn" id="go">Empezar ✏️</button></div>');
+  document.getElementById("go").onclick = function(){ A = []; S = []; I = []; ask(0); };
+}
+
+function ask(i){
+  var d = Q[i], hasV = d.o[0][2] > 0;
+  var h = '<div class="paper">' + track(i) + '<div class="tag">'+d.n+' · '+(i+1)+'/'+Q.length+'</div><h2 class="hand">'+d.q+'</h2>';
+  if(d.sub) h += '<p class="sub" style="margin-bottom:6px">'+d.sub+'</p>';
+  if(hasV) h += '<div class="leg"><span>😣 Incómodo</span><i></i><span>Cómodo 🤩</span></div>';
+  h += '<div class="opts'+(d.grid?' row':'')+'"'+(d.grid?' style="display:grid"':'')+'>';
+  d.o.forEach(function(o,k){
+    h += '<button class="opt" data-k="'+k+'" style="background:var(--bg'+o[2]+');border-color:var(--bd'+o[2]+')"><span class="e">'+o[0]+'</span><span>'+o[1]+'</span></button>';
+  });
+  html(h + '</div></div>');
+  var bs = app.querySelectorAll(".opt");
+  for(var j=0;j<bs.length;j++) bs[j].onclick = function(){
+    var k = +this.getAttribute("data-k"), o = d.o[k];
+    for(var m=0;m<bs.length;m++) bs[m].onclick = null;
+    this.classList.add("sel"); burst(o[0], this);
+    A[i] = o[0] + " " + o[1]; S[i] = o[2]; I[i] = k;
+    setTimeout(function(){ i+1 < Q.length ? ask(i+1) : send(); }, 600);
+  };
+}
+
+/* ====== Envío por correo ====== */
+function code(){ return "C" + I.join("-"); }
+function scores(){ return VAL.map(function(i){ return Q[i].n + " " + S[i]; }).join(" | "); }
+function payload(mode){
+  var p = {_subject:"Encuesta Módulo 7A", _template:"table", _captcha:"false", _cc:CC};
+  Q.forEach(function(d,i){ p[(i+1)+". "+d.q] = A[i]; });
+  p["Puntajes (1 = incómodo, 5 = cómodo)"] = scores();
+  var ar = arche(); p["Arquetipo"] = ar.e + " " + ar.name; p["Sub-arquetipo"] = ar.sub;
+  p["Imagen"] = mode === "ok" ? "adjunta" : (mode === "fallo" ? "el envío con imagen falló; esta es la copia sin imagen" : "no se pudo generar en este dispositivo");
+  p["Código de respuestas"] = code();
+  return p;
+}
+function plain(){
+  var s = "Resultados de la encuesta del Módulo 7A\n\n";
+  Q.forEach(function(d,i){ s += (i+1)+". "+d.q+"\n   → "+A[i]+"\n\n"; });
+  var ar = arche();
+  return s + "Arquetipo: " + ar.e + " " + ar.sub + "\nPuntajes (1 = incómodo, 5 = cómodo): " + scores() + "\nCódigo de respuestas: " + code() + "\n";
+}
+function post(body, isJson){
+  var c = new AbortController(), t = setTimeout(function(){ c.abort(); }, 20000), h = {"Accept":"application/json"};
+  if(isJson) h["Content-Type"] = "application/json";
+  return fetch(ENDPOINT, {method:"POST", headers:h, body:body, signal:c.signal})
+    .then(function(r){ clearTimeout(t); return r.json().then(function(j){ if(!(r.ok && String(j.success) === "true")) throw new Error("mail"); }); });
+}
+function sendMail(b){
+  if(mailSent) return Promise.resolve();
+  if(!b) return post(JSON.stringify(payload("sin")), true).then(function(){ mailSent = true; });
+  var p = payload("ok"), fd = new FormData();
+  Object.keys(p).forEach(function(k){ fd.append(k, p[k]); });
+  fd.append("attachment", b, "mapa-modulo-7a.png");
+  /* Envío clásico (multipart) a FormSubmit, el método documentado para adjuntar archivos.
+     Con no-cors no se puede leer la respuesta: si la petición sale, se da por enviada. */
+  return fetch(ENDPOINT_FORM, {method:"POST", mode:"no-cors", body:fd})
+    .then(function(){ mailSent = true; })
+    .catch(function(){ return post(JSON.stringify(payload("fallo")), true).then(function(){ mailSent = true; }); });
+}
+function withTimeout(p, ms){ return Promise.race([p, new Promise(function(res){ setTimeout(function(){ res(null); }, ms); })]); }
+function send(){
+  html('<div class="scene"><h1 class="hand">Cerrando tu carta…</h1>'+envelope(true,'<div style="font-size:30px;margin-top:30px">✅ 💌 ✅</div>')+'<p class="st">Enviando ✉️</p></div>');
+  var env = document.getElementById("env");
+  setTimeout(function(){ env.classList.remove("open"); }, 200);
+  withTimeout(buildPng().catch(function(){ return null; }), 5000)
+    .then(function(b){ pngBlob = b; return sendMail(b); })
+    .then(function(){ ok(env); }, function(){ fail(); });
+}
+
+/* ====== Resultado gráfico ====== */
+function chart(){
+  var W = 340, H = 218, x0 = 38, x1 = 302, dx = (x1 - x0) / (JOURNEY.length - 1), yT = 34, yB = 150;
+  function y(v){ return yT + (5 - v) / 4 * (yB - yT); }
+  var p = JOURNEY.map(function(q,n){ return [x0 + n*dx, y(S[q])]; });
+  var d = "M" + p[0][0] + " " + p[0][1];
+  for(var i=1;i<p.length;i++){ var m = (p[i-1][0] + p[i][0]) / 2; d += " C" + m + " " + p[i-1][1] + " " + m + " " + p[i][1] + " " + p[i][0] + " " + p[i][1]; }
+  var s = '<svg class="chart" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Tu recorrido emocional"><defs><linearGradient id="gv" gradientUnits="userSpaceOnUse" x1="0" y1="'+yT+'" x2="0" y2="'+yB+'"><stop offset="0" stop-color="#2fbf71"/><stop offset=".5" stop-color="#f2c94c"/><stop offset="1" stop-color="#ef5350"/></linearGradient></defs>';
+  s += '<rect x="4" y="8" width="'+(W-8)+'" height="'+(yB-8+26)+'" rx="18" fill="url(#gv)" opacity=".16"/>';
+  s += '<text x="17" y="'+(yT+5)+'" font-size="14" text-anchor="middle">🤩</text><text x="17" y="'+(y(3)+5)+'" font-size="14" text-anchor="middle">😐</text><text x="17" y="'+(yB+5)+'" font-size="14" text-anchor="middle">😣</text>';
+  s += '<path d="'+d+' L'+x1+' '+yB+' L'+x0+' '+yB+' Z" fill="url(#gv)" opacity=".3"/>';
+  s += '<path class="draw" pathLength="1" d="'+d+'" fill="none" stroke="url(#gv)" stroke-width="7" stroke-linecap="round"/>';
+  JOURNEY.forEach(function(q,n){
+    var cx = p[n][0], cy = p[n][1], v = S[q];
+    s += '<line x1="'+cx+'" y1="'+(cy+22)+'" x2="'+cx+'" y2="'+(yB+14)+'" stroke="var(--bd'+v+')" stroke-width="2" stroke-dasharray="2 5" stroke-linecap="round" opacity=".7"/>';
+    s += '<g class="mk" style="animation-delay:'+(0.4+n*0.3)+'s"><circle cx="'+cx+'" cy="'+cy+'" r="27" fill="var(--bg'+v+')" opacity=".6"/><circle cx="'+cx+'" cy="'+cy+'" r="20" fill="var(--bg'+v+')" stroke="var(--bd'+v+')" stroke-width="3.5"/><text x="'+cx+'" y="'+(cy+7)+'" text-anchor="middle" font-size="21">'+A[q].split(" ")[0]+'</text></g>';
+    s += '<text x="'+cx+'" y="'+(yB+34)+'" text-anchor="middle" font-size="19">'+Q[q].ic+'</text><text x="'+cx+'" y="'+(yB+55)+'" text-anchor="middle" font-size="11" font-weight="800" fill="#8a7358">'+Q[q].n+'</text>';
+  });
+  return s + '</svg>';
+}
+function gauge(avg){
+  var cx = 120, cy = 118, r = 88;
+  function pt(t){ var a = Math.PI - t * Math.PI; return [(cx + r*Math.cos(a)).toFixed(1), (cy - r*Math.sin(a)).toFixed(1)]; }
+  var s = '<svg class="gauge" viewBox="0 0 240 150" role="img" aria-label="Nivel de comodidad">';
+  for(var k=0;k<5;k++){ var a = pt(k/5), b = pt((k+1)/5); s += '<path d="M'+a[0]+' '+a[1]+' A'+r+' '+r+' 0 0 1 '+b[0]+' '+b[1]+'" fill="none" stroke="var(--bd'+(k+1)+')" stroke-width="22"/>'; }
+  var ang = -90 + (avg - 1) / 4 * 180;
+  s += '<g class="needle" transform="rotate('+ang.toFixed(1)+' 120 118)" style="--a:'+ang.toFixed(1)+'deg"><line x1="120" y1="118" x2="120" y2="46" stroke="#3b2a1a" stroke-width="5" stroke-linecap="round"/></g><circle cx="120" cy="118" r="10" fill="#3b2a1a"/>';
+  s += '<text x="22" y="148" font-size="16" text-anchor="middle">😣</text><text x="218" y="148" font-size="16" text-anchor="middle">🤩</text></svg>';
+  return s;
+}
+var ARCH = [
+ {e:"🦋",n:"Mariposa",d:"Fluyes por el módulo con ligereza: casi siempre te sientes en calma y encuentras tu lugar.",l:"Espacios tranquilos, luz natural, música suave y trabajar sin presión."},
+ {e:"🐝",n:"Abeja",d:"Organizada y productiva: sabes a lo que vienes y casi siempre lo logras con buena energía.",l:"El trabajo en equipo, las listas de pendientes, el café y avanzar a buen ritmo."},
+ {e:"🐜",n:"Hormiga",d:"Constante y adaptable: si algo no sale a la primera, buscas otro camino y sigues.",l:"Tener un plan B, las rutinas claras, los rincones conocidos y estudiar acompañada."},
+ {e:"🪲",n:"Escarabajo",d:"Resistente: cargas con la incertidumbre y aun así sigues adelante, aunque te pese.",l:"Los rincones donde nadie te molesta, los audífonos y avanzar a tu propio paso."},
+ {e:"🕷️",n:"Araña",d:"Siempre alerta: lees el ambiente al detalle y el desorden o la espera te tensan.",l:"El orden, el silencio, tener el control de tu entorno y prepararte con tiempo."}
+];
+var GRP = [
+ {t:"Lo que más te pesa es el antes: no saber qué te espera al llegar.",nd:"Llegar con confianza, sin dudas ni sorpresas."},
+ {t:"Lo que más te pesa es la espera cuando todo está lleno.",nd:"Sentir que tu tiempo se respeta mientras esperas."},
+ {t:"Lo que más te pesa es el tiempo adentro: la prisa o la culpa por ocupar el lugar.",nd:"Usar el espacio sin culpa ni presión."},
+ {t:"Tu experiencia es pareja de principio a fin, sin picos fuertes.",nd:"Que la experiencia se mantenga estable y predecible."}
+];
+var SUBN = [
+ ["Mariposa Intuitiva","Mariposa Paciente","Mariposa Ligera","Mariposa Zen"],
+ ["Abeja Exploradora","Abeja Estratega","Abeja Cronometrada","Abeja Obrera"],
+ ["Hormiga Rastreadora","Hormiga Resiliente","Hormiga Veloz","Hormiga Constante"],
+ ["Escarabajo Cauteloso","Escarabajo Aguantador","Escarabajo Apurado","Escarabajo Firme"],
+ ["Araña Vigía","Araña Tejedora","Araña Contrarreloj","Araña Atenta"]
+];
+function arche(){
+  var sc = JOURNEY.map(function(q){ return S[q]; }), avg = sc.reduce(function(a,b){ return a+b; }, 0) / sc.length;
+  var lv = avg >= 4.2 ? 0 : avg >= 3.4 ? 1 : avg >= 2.6 ? 2 : avg >= 1.8 ? 3 : 4;
+  var mn = Math.min.apply(null, sc), mx = Math.max.apply(null, sc), g = 3;
+  if(mx !== mn){ var k = sc.indexOf(mn); g = k <= 1 ? 0 : (k === 2 ? 1 : 2); }
+  var a = ARCH[lv], gr = GRP[g];
+  return {avg:avg, e:a.e, name:a.n, sub:SUBN[lv][g], desc:a.d + " " + gr.t, likes:a.l, need:gr.nd};
+}
+function stats(){
+  var ar = arche(), bi = 0, wi = 0;
+  JOURNEY.forEach(function(q,n){ if(S[q] > S[JOURNEY[bi]]) bi = n; if(S[q] < S[JOURNEY[wi]]) wi = n; });
+  return {avg:ar.avg, ar:ar, bq:JOURNEY[bi], wq:JOURNEY[wi]};
+}
+function inner(s){ return s.replace(/^<svg[^>]*>/, "").replace(/<\/svg>\s*$/, ""); }
+function solid(s){ return s.replace(/var\(--(b[gd]\d)\)/g, function(m,k){ return COL[k]; }); }
+function exportSvg(){
+  var st = stats(), ar = st.ar, W = 1080, H = 2210, ink = "#3b2a1a", mut = "#8a7358", v0 = S[0];
+  var g = '<svg xmlns="http://www.w3.org/2000/svg" width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'" font-family="Nunito, Arial, Helvetica, sans-serif" text-anchor="middle">';
+  g += '<rect width="'+W+'" height="'+H+'" fill="#f3e3c3"/><rect x="40" y="40" width="1000" height="2130" rx="14" fill="#fffaf0"/><rect x="40" y="40" width="1000" height="16" fill="#d6455d"/>';
+  g += '<text x="540" y="150" font-size="76" font-weight="800" fill="'+ink+'">Mi mapa emocional</text><text x="540" y="204" font-size="34" fill="'+mut+'">Módulo 7A · estudio y reuniones</text>';
+  g += '<rect x="100" y="244" width="880" height="86" rx="43" fill="'+COL["bg"+v0]+'" stroke="'+COL["bd"+v0]+'" stroke-width="6"/><text x="540" y="300" font-size="34" font-weight="800" fill="'+ink+'">✨ Tu vibra: '+A[0]+'</text>';
+  g += '<text x="540" y="410" font-size="28" font-weight="800" fill="'+mut+'" letter-spacing="3">TU BICHO EN EL MÓDULO</text><text x="540" y="520" font-size="96">'+ar.e+'</text><text x="540" y="595" font-size="58" font-weight="800" fill="'+ink+'">'+ar.sub+'</text><text x="540" y="642" font-size="30" font-weight="800" fill="'+mut+'">Arquetipo: '+ar.name+'</text>';
+  g += '<g transform="translate(180 680) scale(3)">'+solid(inner(gauge(st.avg)))+'</g>';
+  g += '<text x="540" y="1170" font-size="40" font-weight="800" fill="'+ink+'">Comodidad: '+st.avg.toFixed(1)+' / 5</text>';
+  g += '<text x="540" y="1240" font-size="28" font-weight="800" fill="'+mut+'" letter-spacing="3">TU RECORRIDO</text>';
+  g += '<g transform="translate(47 1260) scale(2.9)">'+solid(inner(chart()))+'</g>';
+  if(S[st.bq] !== S[st.wq]){
+    [[st.bq,"💚 Lo mejor",70],[st.wq,"🔴 Lo más difícil",560]].forEach(function(c){
+      var q = c[0], x = c[2];
+      g += '<rect x="'+x+'" y="1915" width="450" height="200" rx="28" fill="'+COL["bg"+S[q]]+'" stroke="'+COL["bd"+S[q]]+'" stroke-width="6"/><text x="'+(x+225)+'" y="1985" font-size="64">'+Q[q].ic+'</text><text x="'+(x+225)+'" y="2033" font-size="30" font-weight="800" fill="'+ink+'">'+c[1]+'</text><text x="'+(x+225)+'" y="2081" font-size="36" font-weight="800" fill="'+ink+'">'+Q[q].n+'</text>';
+    });
+  }
+  return g + '<text x="540" y="2150" font-size="30" fill="'+mut+'">Gracias por compartir cómo te sientes 💛</text></svg>';
+}
+function buildPng(){
+  return new Promise(function(res,rej){
+    try{
+      var img = new Image();
+      img.onload = function(){
+        try{
+          var c = document.createElement("canvas"); c.width = 1080; c.height = 2210;
+          c.getContext("2d").drawImage(img, 0, 0);
+          c.toBlob(function(b){ b ? res(b) : rej(new Error("png")); }, "image/png");
+        }catch(e){ rej(e); }
+      };
+      img.onerror = function(){ rej(new Error("img")); };
+      img.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(exportSvg());
+    }catch(e){ rej(e); }
+  });
+}
+function saveImg(){
+  var f = new File([pngBlob], "mi-mapa-modulo-7a.png", {type:"image/png"});
+  if(navigator.canShare && navigator.canShare({files:[f]})){
+    navigator.share({files:[f], title:"Mi mapa emocional · Módulo 7A"}).catch(function(){});
+    return;
+  }
+  var u = URL.createObjectURL(pngBlob), a = document.createElement("a");
+  a.href = u; a.download = f.name; document.body.appendChild(a); a.click(); a.remove();
+  document.getElementById("pv").innerHTML = '<p class="sub" style="margin:12px 0 6px">Si no se descargó, mantén presionada la imagen para guardarla 👇</p><img src="'+u+'" alt="Mi mapa emocional" style="width:100%;border-radius:10px">';
+}
+function result(){
+  var st = stats(), avg = st.avg, ar = st.ar, bq = st.bq, wq = st.wq;
+  var h = '<div class="paper" style="text-align:center"><h1 class="hand" style="font-size:34px">¡Carta enviada! 📬</h1><div class="chip" style="background:var(--bg'+S[0]+');border-color:var(--bd'+S[0]+')">✨ Tu vibra: '+A[0]+'</div>';
+  h += '<div class="h3">Tu bicho en el módulo</div><div class="bugE">'+ar.e+'</div><p class="prof hand">'+ar.sub+'</p><div class="arch">Arquetipo: '+ar.name+'</div>';
+  h += '<div class="h3">Tu nivel de comodidad</div>'+gauge(avg)+'<div style="font-weight:800;margin-top:-2px">Comodidad: '+avg.toFixed(1)+' / 5</div>';
+  h += '<div class="h3">Tu recorrido</div>'+chart();
+  if(S[bq] !== S[wq]){
+    h += '<div class="duo"><div style="background:var(--bg'+S[bq]+');border-color:var(--bd'+S[bq]+')"><b>'+Q[bq].ic+'</b>💚 Lo mejor<br>'+Q[bq].n+'</div><div style="background:var(--bg'+S[wq]+');border-color:var(--bd'+S[wq]+')"><b>'+Q[wq].ic+'</b>🔴 Lo más difícil<br>'+Q[wq].n+'</div></div>';
+  }
+  if(pngBlob) h += '<button class="btn" id="sv">📥 Guardar mi mapa como imagen</button><div id="pv"></div>';
+  h += '<p class="sub" style="margin:12px 0 0">Gracias por compartir cómo te sientes 💛</p></div>';
+  html(h);
+  var sv = document.getElementById("sv"); if(sv) sv.onclick = saveImg;
+}
+function ok(env){
+  setTimeout(function(){ env.classList.add("fly"); }, 700);
+  setTimeout(result, 1700);
+}
+function fail(){
+  html('<div class="paper" style="text-align:center"><div class="big">📮</div><h2 class="hand" style="font-size:30px">No pudimos enviarla automáticamente</h2><p class="sub">¿Nos ayudas? Toca el botón para mandarla desde tu correo; ya va escrita.</p><button class="btn" id="re">🔁 Intentar de nuevo</button><button class="btn alt" id="ml">📩 Enviar desde mi correo</button><button class="btn alt" id="cp">📋 Copiar mis respuestas</button><p class="sub" id="msg" style="margin-top:12px"></p></div>');
+  document.getElementById("re").onclick = send;
+  document.getElementById("ml").onclick = function(){
+    location.href = "mailto:"+MAIL+"?subject="+encodeURIComponent("Encuesta Módulo 7A")+"&body="+encodeURIComponent(plain());
+  };
+  document.getElementById("cp").onclick = function(){
+    var m = document.getElementById("msg");
+    try{ navigator.clipboard.writeText(plain()).then(function(){ m.textContent = "¡Copiado! Pégalo en un correo a "+MAIL; }, function(){ m.textContent = "No se pudo copiar. Haz una captura de pantalla."; }); }
+    catch(e){ m.textContent = "No se pudo copiar. Haz una captura de pantalla."; }
+  };
+}
+intro();
+</script>
+</body>
+</html>
